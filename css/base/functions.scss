@@ -1,0 +1,27 @@
+@function get-map-value($map, $keys...) {
+    @each $key in $keys {
+        $isValidKey: map-has-key($map, $key);
+
+        @if ($isValidKey==false) {
+            @warn "There is no element with key: '#{$key}'.";
+
+            @return null;
+        }
+
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+@function color($key) {
+    @return get-map-value($colors, $key);
+}
+
+@function font-size($key) {
+    @return get-map-value($font-sizes, $key);
+}
+
+@function font($key) {
+    @return get-map-value($fonts, $key);
+}
