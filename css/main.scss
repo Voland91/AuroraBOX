@@ -1,16 +1,15 @@
 @import "base/variables";
 @import "base/functions";
 
-html {
-    box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
     padding: 0;
     margin: 0;
+}
+
+html {
+    box-sizing: border-box;
 }
 
 body {
@@ -46,6 +45,13 @@ body {
     border: 1px solid color(grayLight);
     background-color: transparent;
     padding: 12px 24px;
+    cursor: pointer;
+}
+
+.contactBar__link {
+    text-decoration: none;
+    list-style: none;
+    color: color(black);
 }
 
 .firstItem {
@@ -63,6 +69,24 @@ body {
 .content {
     display: flex;
     margin-top: 35px;
+    align-items: center;
+
+}
+
+.content__searchWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.2px solid color(black);
+    padding: 0 5px;
+    width: 470px;
+}
+
+.content__search {
+    border: none;
+    font-family: font(secondary);
+    color: color(gray);
+    height: 30px;
 }
 
 .navigation {
@@ -87,5 +111,33 @@ body {
 
     &:hover {
         color: color(pinkLight)
+    }
+}
+
+.categories__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 175px;
+    height: 270px;
+    padding: 30px 0px 30px 30px;
+    margin-top: 20px;
+    text-transform: none;
+    list-style: none;
+    font-weight: 300;
+    border: 3px solid color(grayLight)
+}
+
+.categories__link {
+    display: block;
+    width: 175px;
+    height: 40px;
+    text-decoration: none;
+    list-style: none;
+    color: color(black);
+    transition: .2s;
+
+    &:hover {
+        background-color: color(grayLighest);
     }
 }

@@ -13,9 +13,10 @@
         <section class="header__contact contactBar">
             <ul class="contactBar__list">
                 <li class="contactBar__item firstItem"><img class="contactBar__icon"
-                        src="/src/icons/phone-icon.png" /><a href="tel:293 939 098">293 939 098</a></li>
+                        src="/src/icons/phone-icon.png" /><a class="contactBar__link" href="tel:293 939 098">293 939
+                        098</a></li>
                 <li class="contactBar__item"><img class="contactBar__icon" src="/src/icons/mail-icon.png" /><a
-                        href="mailto:kontakt@aurorabox.pl">kontakt@aurorabox.pl</a></li>
+                        class="contactBar__link" href="mailto:kontakt@aurorabox.pl">kontakt@aurorabox.pl</a></li>
             </ul>
             <div class="contactBar__list">
                 <button class="contactBar__button"><img class="contactBar__icon"
@@ -26,12 +27,24 @@
         </section>
         <section class="header__content content">
             <img src="/src/logo/AuroraBOX-logo.png" />
-            <input type="search">
+            <div class="content__searchWrapper"><input class="content__search" type="search"
+                    placeholder="Co chcesz kupić?"><img src="/src/icons/search-icon.png" /></div>
+
             <div>Twój koszyk</div>
         </section>
         <nav class="header__nav navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a class="navigation__link" href="#">kategorie</a></li>
+                <li class="navigation__item categories"><a class="navigation__link" href="#">kategorie</a>
+                    <ul class="categories__list">
+                        <li class="categories__item"><a class="categories__link" href="#">Biustonosze</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">Body</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">Majtki</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">Stroje kąpielowe</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">Bielizna erotyczna</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">Stroje sportowe</a></li>
+                        <li class="categories__item"><a class="categories__link" href="#">bieliznna wieczorowa</a></li>
+                    </ul>
+                </li>
                 <li class="navigation__item"><a class="navigation__link" href="#">nowości</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#">promocje</a></li>
                 <li class="navigation__item"><a class="navigation__link" href="#">wyprzedaże</a></li>

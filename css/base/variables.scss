@@ -3,9 +3,10 @@ $colors: (black: #000,
     gray: #a3a2a2,
     pinkLight: #ecc7d0,
     grayLight: #d7d7d7,
+    grayLighest: #f7f7f7,
     bg: #fff);
 
 $font-sizes: (main: 12px, nav: 13.3px);
 
 $fonts: (main: #{'Lato', 'Arial', sans-serif},
-    adobe: ('Helvetica', sans-serif));
+    secondary: ('Helvetica', sans-serif));
