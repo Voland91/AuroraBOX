@@ -1,0 +1,13 @@
+body {
+    font-family: font(main);
+    font-size: font-size(main);
+}
+
+.body__line {
+    position: absolute;
+    top: 40px;
+    width: 100vw;
+    border: 0;
+    border-bottom: 1px solid;
+    color: color(grayLight);
+}

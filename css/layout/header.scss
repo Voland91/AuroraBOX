@@ -1,0 +1,134 @@
+.header {
+    margin: 0 auto;
+    width: 1240px;
+    color: color(black);
+}
+
+
+.contactBar,
+.contactBar__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.contactBar {
+    justify-content: space-between;
+    height: 40px;
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__button {
+        @include buttonReset;
+        border: 1px solid color(grayLight);
+        padding: 12px 24px;
+    }
+
+    &__link {
+        @include listLink;
+    }
+}
+
+
+.firstItem {
+    margin-right: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    align-items: center;
+
+    &__sideWrapper {
+        display: flex;
+    }
+}
+
+
+.navigation {
+    margin-top: 60px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: font-size(nav);
+        font-weight: bold;
+        list-style: none;
+    }
+
+    &__item {
+        &:hover>.categories__list {
+            display: block;
+        }
+    }
+
+    &__link {
+        @include listLink;
+        text-transform: uppercase;
+        transition: 0.2s;
+
+        &:hover {
+            color: color(pinkLight);
+        }
+    }
+}
+
+
+.subList {
+    @include categoryList;
+    text-transform: none;
+    list-style: none;
+    font-weight: 300;
+    border: 3px solid color(grayLight);
+    padding: 12px 0px;
+}
+
+.categories {
+    &__list {
+        display: none;
+    }
+
+    &__item {
+        padding: 15px 30px;
+        transition: .2s;
+
+        &:hover {
+            background-color: color(grayLighest);
+        }
+
+        &:hover>.bras__list {
+            display: block;
+        }
+    }
+
+    &__link {
+        @include listLink;
+    }
+}
+
+.bras {
+    &__list {
+        display: none;
+        top: -.8%;
+        left: 100%
+    }
+
+    &__item {
+        padding: 8px 70px 8px 30px;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &__link {
+        @include listLink;
+
+        &:hover {
+            color: color(pinkLight)
+        }
+    }
+}
