@@ -1,0 +1,20 @@
+@mixin listLink {
+    text-decoration: none;
+    list-style: none;
+    color: color(black);
+    // display: block;
+    transition: 0.2s;
+}
+
+@mixin categoryList {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin buttonReset {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

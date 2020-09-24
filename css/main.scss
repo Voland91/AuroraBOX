@@ -1,5 +1,6 @@
 @import "base/variables";
 @import "base/functions";
+@import "base/mixins";
 
 *,
 *::before,
@@ -35,24 +36,21 @@ body {
     justify-content: space-between;
     height: 40px;
 
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__button {
+        @include buttonReset;
+        border: 1px solid color(grayLight);
+        padding: 12px 24px;
+    }
+
+    &__link {
+        @include listLink;
+    }
 }
 
-.contactBar__icon {
-    margin-right: 10px;
-}
-
-.contactBar__button {
-    border: 1px solid color(grayLight);
-    background-color: transparent;
-    padding: 12px 24px;
-    cursor: pointer;
-}
-
-.contactBar__link {
-    text-decoration: none;
-    list-style: none;
-    color: color(black);
-}
 
 .firstItem {
     margin-right: 20px;
@@ -62,82 +60,162 @@ body {
     position: absolute;
     top: 40px;
     width: 100vw;
-    border: 1px solid;
+    border: 0;
+    border-bottom: 1px solid;
     color: color(grayLight);
 }
 
 .content {
     display: flex;
+    justify-content: space-between;
     margin-top: 35px;
     align-items: center;
 
-}
+    &__sideWrapper {
+        display: flex;
+    }
 
-.content__searchWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1.2px solid color(black);
-    padding: 0 5px;
-    width: 470px;
-}
+    &__searchWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1.2px solid color(black);
+        padding: 0 5px;
+        width: 470px;
+        margin-right: 150px;
+    }
 
-.content__search {
-    border: none;
-    font-family: font(secondary);
-    color: color(gray);
-    height: 30px;
-}
+    &__search {
+        border: none;
+        font-family: font(secondary);
+        color: color(gray);
+        height: 30px;
+    }
 
-.navigation {
-    margin-top: 60px;
-}
-
-.navigation__list {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: font-size(nav);
-    font-weight: bold;
-}
-
-.navigation__link {
-    text-decoration: none;
-    list-style: none;
-    color: color(black);
-    transition: .2s;
-
-    &:hover {
-        color: color(pinkLight)
+    &__searchButton {
+        @include buttonReset
     }
 }
 
-.categories__list {
+.cart {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 175px;
-    height: 270px;
-    padding: 30px 0px 30px 30px;
-    margin-top: 20px;
+
+    &__button {
+        @include buttonReset
+    }
+
+    &__icon {
+        position: relative;
+        margin-right: 12px;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        width: 20px;
+        height: 20px;
+        background-color: color(pinkLight);
+        border-radius: 50%;
+    }
+
+    &__number {
+        position: absolute;
+        font-weight: 900;
+        color: color(bg);
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        font-weight: bold;
+    }
+}
+
+
+.navigation {
+    margin-top: 60px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: font-size(nav);
+        font-weight: bold;
+        list-style: none;
+    }
+
+    &__item {
+        &:hover>.categories__list {
+            display: block;
+        }
+    }
+
+    &__link {
+        @include listLink;
+        text-transform: uppercase;
+        transition: 0.2s;
+
+        &:hover {
+            color: color(pinkLight);
+        }
+    }
+}
+
+
+.subList {
+    @include categoryList;
     text-transform: none;
     list-style: none;
     font-weight: 300;
-    border: 3px solid color(grayLight)
+    border: 3px solid color(grayLight);
+    padding: 12px 0px;
 }
 
-.categories__link {
-    display: block;
-    width: 175px;
-    height: 40px;
-    text-decoration: none;
-    list-style: none;
-    color: color(black);
-    transition: .2s;
+.categories {
+    &__list {
+        display: none;
+    }
 
-    &:hover {
-        background-color: color(grayLighest);
+    &__item {
+        padding: 15px 30px;
+        transition: .2s;
+
+        &:hover {
+            background-color: color(grayLighest);
+        }
+
+        &:hover>.bras__list {
+            display: block;
+        }
+    }
+
+    &__link {
+        @include listLink;
+    }
+}
+
+.bras {
+    &__list {
+        display: none;
+        top: -.8%;
+        left: 100%
+    }
+
+    &__item {
+        padding: 8px 70px 8px 30px;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &__link {
+        @include listLink;
+
+        &:hover {
+            color: color(pinkLight)
+        }
     }
 }
