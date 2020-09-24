@@ -1,3 +1,10 @@
+@import "../base/variables";
+@import "../base/functions";
+@import "../base/mixins";
+
+@import '../components/search.scss';
+@import "../components/cart.scss";
+
 .header {
     margin: 0 auto;
     width: 1240px;
@@ -60,7 +67,7 @@
     }
 
     &__item {
-        &:hover>.categories__list {
+        &:hover>.secondary__list {
             display: block;
         }
     }
@@ -86,7 +93,9 @@
     padding: 12px 0px;
 }
 
-.categories {
+.secondary {
+    margin-top: 20px;
+
     &__list {
         display: none;
     }
@@ -99,7 +108,7 @@
             background-color: color(grayLighest);
         }
 
-        &:hover>.bras__list {
+        &:hover>.tertiary__list {
             display: block;
         }
     }
@@ -109,7 +118,7 @@
     }
 }
 
-.bras {
+.tertiary {
     &__list {
         display: none;
         top: -.8%;
