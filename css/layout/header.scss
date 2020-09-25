@@ -10,24 +10,24 @@
     width: 1240px;
     color: color(black);
 
-    @include media(breakpoint(tablet), ) {
-        width: 100%;
-        // max-width: 1440px;
-        margin: 0 auto;
+    @include media(breakpoint(mobile), breakpoint(tablet)) {
+        width: 95vw;
     }
 }
 
 
-.contactBar,
-.contactBar__list {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
 .contactBar {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     height: 40px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
 
     &__icon {
         margin-right: 10px;
@@ -50,10 +50,21 @@
 }
 
 .content {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
     align-items: center;
+
+    @include media(breakpoint(mobile), breakpoint(tablet)) {
+        margin-top: 25px;
+    }
+
+    &__logo {
+        @include media(breakpoint(mobile), breakpoint(tablet)) {
+            width: 130px;
+        }
+    }
 
     &__sideWrapper {
         display: flex;
@@ -64,6 +75,10 @@
 .navigation {
     margin-top: 60px;
 
+    @include media(breakpoint(mobile), breakpoint(tablet)) {
+        margin-top: 30px;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
@@ -73,6 +88,10 @@
     }
 
     &__item {
+        @include media(breakpoint(mobile), breakpoint(tablet)) {
+            font-size: font-size(tabletMain);
+        }
+
         &:hover>.secondary__list {
             display: block;
         }

@@ -25,3 +25,7 @@
 @function font($key) {
     @return get-map-value($fonts, $key);
 }
+
+@function breakpoint($key) {
+    @return get-map-value($breakpoints, $key);
+}

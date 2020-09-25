@@ -7,6 +7,11 @@
     width: 470px;
     margin-right: 150px;
 
+    @include media(breakpoint(mobile), breakpoint(tablet)) {
+        width: 350px;
+        margin-right: 20px;
+    }
+
     &__input {
         border: none;
         font-family: font(secondary);
@@ -15,6 +20,6 @@
     }
 
     &__button {
-        @include buttonReset
+        @include buttonReset;
     }
 }

@@ -21,6 +21,12 @@ body {
   width: 470px;
   margin-right: 150px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search {
+    width: 350px;
+    margin-right: 20px;
+  }
+}
 .search__input {
   border: none;
   font-family: "Helvetica", sans-serif;
@@ -32,6 +38,11 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search__button {
+    font-size: 10px;
+  }
+}
 
 .cart {
   display: flex;
@@ -40,6 +51,11 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart__button {
+    font-size: 10px;
+  }
 }
 .cart__icon {
   position: relative;
@@ -72,23 +88,23 @@ body {
   width: 1240px;
   color: #000;
 }
-@media (min-width: breakpoint(breakpoint(tablet))) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .header {
-    width: 100%;
-    margin: 0 auto;
+    width: 95vw;
   }
 }
 
-.contactBar,
+.contactBar {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
 .contactBar__list {
   display: flex;
   list-style: none;
   align-items: center;
-}
-
-.contactBar {
-  justify-content: space-between;
-  height: 40px;
 }
 .contactBar__icon {
   margin-right: 10px;
@@ -99,6 +115,11 @@ body {
   cursor: pointer;
   border: 1px solid #d7d7d7;
   padding: 12px 24px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contactBar__button {
+    font-size: 10px;
+  }
 }
 .contactBar__link {
   text-decoration: none;
@@ -112,10 +133,21 @@ body {
 }
 
 .content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 35px;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    margin-top: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content__logo {
+    width: 130px;
+  }
 }
 .content__sideWrapper {
   display: flex;
@@ -124,12 +156,22 @@ body {
 .navigation {
   margin-top: 60px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navigation {
+    margin-top: 30px;
+  }
+}
 .navigation__list {
   display: flex;
   justify-content: space-between;
   font-size: 13.3px;
   font-weight: bold;
   list-style: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navigation__item {
+    font-size: 10px;
+  }
 }
 .navigation__item:hover > .secondary__list {
   display: block;

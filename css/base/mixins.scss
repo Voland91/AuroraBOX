@@ -16,4 +16,8 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+
+    @include media(breakpoint(mobile), breakpoint(tablet)) {
+        font-size: font-size(tabletMain);
+    }
 }
