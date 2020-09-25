@@ -10,4 +10,8 @@ body {
     border: 0;
     border-bottom: 1px solid;
     color: color(grayLight);
+
+    @include media(320px, breakpoint(mobile)) {
+        top: 90px;
+    }
 }

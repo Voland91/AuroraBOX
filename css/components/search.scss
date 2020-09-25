@@ -12,6 +12,11 @@
         margin-right: 20px;
     }
 
+    @include media(320px, breakpoint(mobile)) {
+        width: 250px;
+        margin-right: 0;
+    }
+
     &__input {
         border: none;
         font-family: font(secondary);

@@ -11,6 +11,11 @@ body {
   border-bottom: 1px solid;
   color: #d7d7d7;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .body__line {
+    top: 90px;
+  }
+}
 
 .search {
   display: flex;
@@ -25,6 +30,12 @@ body {
   .search {
     width: 350px;
     margin-right: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .search {
+    width: 250px;
+    margin-right: 0;
   }
 }
 .search__input {
@@ -88,7 +99,7 @@ body {
   width: 1240px;
   color: #000;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .header {
     width: 95vw;
   }
@@ -101,10 +112,20 @@ body {
   justify-content: space-between;
   height: 40px;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .contactBar {
+    flex-direction: column;
+  }
+}
 .contactBar__list {
   display: flex;
   list-style: none;
   align-items: center;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .contactBar__list {
+    margin: 10px auto 0px auto;
+  }
 }
 .contactBar__icon {
   margin-right: 10px;
@@ -119,6 +140,11 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   .contactBar__button {
     font-size: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .contactBar__button {
+    margin: 0 5px;
   }
 }
 .contactBar__link {
@@ -144,6 +170,14 @@ body {
     margin-top: 25px;
   }
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .content {
+    margin-top: 75px;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-between;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .content__logo {
     width: 130px;
@@ -151,6 +185,15 @@ body {
 }
 .content__sideWrapper {
   display: flex;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .content__sideWrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .navigation {
@@ -161,12 +204,25 @@ body {
     margin-top: 30px;
   }
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .navigation {
+    margin-top: 20px;
+  }
+}
 .navigation__list {
   display: flex;
   justify-content: space-between;
   font-size: 13.3px;
   font-weight: bold;
   list-style: none;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .navigation__list {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .navigation__item {
@@ -175,6 +231,11 @@ body {
 }
 .navigation__item:hover > .secondary__list {
   display: block;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .navigation__item {
+    margin-top: 15px;
+  }
 }
 .navigation__link {
   text-decoration: none;

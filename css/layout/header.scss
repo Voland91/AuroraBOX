@@ -10,7 +10,7 @@
     width: 1240px;
     color: color(black);
 
-    @include media(breakpoint(mobile), breakpoint(tablet)) {
+    @include media(320px, breakpoint(tablet)) {
         width: 95vw;
     }
 }
@@ -23,10 +23,18 @@
     justify-content: space-between;
     height: 40px;
 
+    @include media(320px, breakpoint(mobile)) {
+        flex-direction: column;
+    }
+
     &__list {
         display: flex;
         list-style: none;
         align-items: center;
+
+        @include media(320px, breakpoint(mobile)) {
+            margin: 10px auto 0px auto;
+        }
     }
 
     &__icon {
@@ -37,6 +45,10 @@
         @include buttonReset;
         border: 1px solid color(grayLight);
         padding: 12px 24px;
+
+        @include media(320px, breakpoint(mobile)) {
+            margin: 0 5px;
+        }
     }
 
     &__link {
@@ -60,6 +72,13 @@
         margin-top: 25px;
     }
 
+    @include media(320px, breakpoint(mobile)) {
+        margin-top: 75px;
+        flex-direction: column;
+        height: 50%;
+        justify-content: space-between;
+    }
+
     &__logo {
         @include media(breakpoint(mobile), breakpoint(tablet)) {
             width: 130px;
@@ -68,6 +87,14 @@
 
     &__sideWrapper {
         display: flex;
+
+        @include media(320px, breakpoint(mobile)) {
+            margin-top: 20px;
+            flex-direction: column;
+            height: 15vh;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }
 
@@ -79,12 +106,23 @@
         margin-top: 30px;
     }
 
+    @include media(320px, breakpoint(mobile)) {
+        margin-top: 20px;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
         font-size: font-size(nav);
         font-weight: bold;
         list-style: none;
+
+        @include media(320px, breakpoint(mobile)) {
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+            background-color: color(grayLighest);
+        }
     }
 
     &__item {
@@ -94,6 +132,10 @@
 
         &:hover>.secondary__list {
             display: block;
+        }
+
+        @include media(320px, breakpoint(mobile)) {
+            margin-top: 15px;
         }
     }
 
