@@ -9,6 +9,12 @@
     margin: 0 auto;
     width: 1240px;
     color: color(black);
+
+    @include media(breakpoint(tablet), ) {
+        width: 100%;
+        // max-width: 1440px;
+        margin: 0 auto;
+    }
 }
 
 
@@ -86,6 +92,7 @@
 
 .subList {
     @include categoryList;
+    background-color: color(bg);
     text-transform: none;
     list-style: none;
     font-weight: 300;
@@ -94,10 +101,9 @@
 }
 
 .secondary {
-    margin-top: 20px;
-
     &__list {
         display: none;
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
     }
 
     &__item {
@@ -119,7 +125,10 @@
 }
 
 .tertiary {
+    z-index: 999;
+
     &__list {
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
         display: none;
         top: -.8%;
         left: 100%
@@ -127,10 +136,6 @@
 
     &__item {
         padding: 8px 70px 8px 30px;
-
-        &:hover {
-            background-color: transparent;
-        }
     }
 
     &__link {

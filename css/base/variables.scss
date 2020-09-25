@@ -10,3 +10,8 @@ $font-sizes: (main: 12px, nav: 13.3px);
 
 $fonts: (main: #{'Lato', 'Arial', sans-serif},
     secondary: ('Helvetica', sans-serif));
+
+$breakpoints: (mobile: 768px,
+    tablet: 1025px,
+    desktop: 1440px,
+);

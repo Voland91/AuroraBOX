@@ -1,11 +1,11 @@
 @import "base/variables";
 @import "base/functions";
+@import 'base/media-queries.scss';
 @import "base/mixins";
 
 @import "layout/body.scss";
 @import "layout/header.scss";
-@import 'components/search.scss';
-@import "components/cart.scss";
+
 
 
 *,
